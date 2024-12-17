@@ -1,12 +1,12 @@
 {
   "kind": "decision",
   "id": "67514c456b10f0edcea72f95",
-  "chamber": null,
-  "formation": null,
+  "chamber": "Deuxième chambre civile",
+  "formation": "Formation restreinte hors RNSM/NA",
   "publication": null,
-  "number": null,
+  "number": "22-23.835",
   "ecli": "ECLI:FR:CCASS:2024:C201167",
-  "decision_date": null,
+  "decision_date": "2024-12-05",
   "solution": null,
   "content": null,
   "texts": null

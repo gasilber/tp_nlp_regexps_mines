@@ -1,12 +1,12 @@
 {
   "kind": "decision",
   "id": "67593257db845b438efc6e22",
-  "chamber": null,
-  "formation": null,
-  "publication": null,
-  "number": null,
+  "chamber": "Première chambre civile",
+  "formation": "Formation de section",
+  "publication": "Publié au Bulletin-Publié au Rapport",
+  "number": "23-15.672",
   "ecli": "ECLI:FR:CCASS:2024:C100695",
-  "decision_date": null,
+  "decision_date": "2024-12-11",
   "solution": null,
   "content": null,
   "texts": null

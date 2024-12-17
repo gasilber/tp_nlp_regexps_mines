@@ -1,12 +1,12 @@
 {
   "kind": "decision",
   "id": "67593248db845b438efc6e0e",
-  "chamber": null,
-  "formation": null,
-  "publication": null,
-  "number": null,
+  "chamber": "Chambre sociale",
+  "formation": "Formation restreinte hors RNSM/NA",
+  "publication": "Publié au Bulletin",
+  "number": "23-18.987",
   "ecli": "ECLI:FR:CCASS:2024:SO01278",
-  "decision_date": null,
+  "decision_date": "2024-12-11",
   "solution": null,
   "content": null,
   "texts": null

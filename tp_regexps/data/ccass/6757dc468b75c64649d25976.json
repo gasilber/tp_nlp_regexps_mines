@@ -1,12 +1,12 @@
 {
   "kind": "decision",
   "id": "6757dc468b75c64649d25976",
-  "chamber": null,
-  "formation": null,
-  "publication": null,
-  "number": null,
+  "chamber": "Chambre criminelle",
+  "formation": "Formation restreinte hors RNSM/NA",
+  "publication": "Publié au Bulletin",
+  "number": "24-83.069",
   "ecli": "ECLI:FR:CCASS:2024:CR01489",
-  "decision_date": null,
+  "decision_date": "2024-12-10",
   "solution": null,
   "content": null,
   "texts": null

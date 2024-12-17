@@ -1,12 +1,12 @@
 {
   "kind": "decision",
   "id": "67514c8f6b10f0edcea73009",
-  "chamber": null,
-  "formation": null,
-  "publication": null,
-  "number": null,
+  "chamber": "Deuxième chambre civile",
+  "formation": "Formation de section",
+  "publication": "Publié au Bulletin",
+  "number": "22-22.395",
   "ecli": "ECLI:FR:CCASS:2024:C201151",
-  "decision_date": null,
+  "decision_date": "2024-12-05",
   "solution": null,
   "content": null,
   "texts": null

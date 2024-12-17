@@ -1,12 +1,12 @@
 {
   "kind": "decision",
   "id": "6759324cdb845b438efc6e14",
-  "chamber": null,
-  "formation": null,
-  "publication": null,
-  "number": null,
+  "chamber": "Chambre commerciale financière et économique",
+  "formation": "Formation restreinte hors RNSM/NA",
+  "publication": "Publié au Bulletin",
+  "number": "23-15.063",
   "ecli": "ECLI:FR:CCASS:2024:CO00755",
-  "decision_date": null,
+  "decision_date": "2024-12-11",
   "solution": null,
   "content": null,
   "texts": null

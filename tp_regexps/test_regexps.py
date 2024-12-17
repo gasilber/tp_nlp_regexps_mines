@@ -44,3 +44,52 @@ class TestRegexps(unittest.TestCase):
         for id, reference_decision, html_decision in self.__iterate_on_decisions():
             with self.subTest(id, id=id):
                 self.assertEqual(reference_decision.ecli, html_decision.ecli, id)
+
+    def test_chamber(self):
+        """Récupération du chamber"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.chamber, html_decision.chamber, id)
+
+    def test_formation(self):
+        """Récupération du formation"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.formation, html_decision.formation, id)
+
+    def test_publication(self):
+        """Récupération du publication"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.publication, html_decision.publication, id)
+
+    def test_number(self):
+        """Récupération du number"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.number, html_decision.number, id)
+
+    def test_decision_date(self):
+        """Récupération du decision_date"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.decision_date, html_decision.decision_date, id)
+
+
+    def test_solution(self):
+        """Récupération du solution"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.solution, html_decision.solution, id)
+
+    def test_content(self):
+        """Récupération du content"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.content, html_decision.content, id)
+
+    def test_texts(self):
+        """Récupération du texts"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.texts, html_decision.texts, id)

@@ -1,12 +1,12 @@
 {
   "kind": "decision",
   "id": "67514c8a6b10f0edcea73001",
-  "chamber": null,
-  "formation": null,
-  "publication": null,
-  "number": null,
+  "chamber": "Troisième chambre civile",
+  "formation": "Formation de section",
+  "publication": "Publié au Bulletin",
+  "number": "21-18.445",
   "ecli": "ECLI:FR:CCASS:2024:C300670",
-  "decision_date": null,
+  "decision_date": "2024-12-05",
   "solution": null,
   "content": null,
   "texts": null
