@@ -1,4 +1,4 @@
-# Travaux pratiques sur le "scraping" et les expressions régulières: JudiLibre
+# Travaux pratiques sur les expressions régulières: JudiLibre
 
 Vous venez d'être recruté par la jeune startup [Docteur Justice](https://fr.wikipedia.org/wiki/Docteur_Justice) qui souhaite créer un LLM afin de réaliser des analyses juridiques.
 Pour cela, cette startup a besoin d'un fond documentaire incluant les données de jurisprudence des cours de droit privé (tribunaux judiciaires, cours d'appel et cour de cassation).
