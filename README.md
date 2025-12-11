@@ -4,6 +4,17 @@ Vous venez d'être recruté par la jeune startup [Docteur Justice](https://fr.wi
 Pour cela, cette startup a besoin d'un fond documentaire incluant les données de jurisprudence des cours de droit privé (tribunaux judiciaires, cours d'appel et cour de cassation).
 Votre première mission est de participer à la création d'un système permettant de récupérer toutes les décisions de la cour de cassation en HTML qui sont disponibles sur le site [judilibre](https://www.courdecassation.fr/acces-rapide-judilibre) de la cour de cassation, et de structurer les données obtenues en JSON.
 
+## Installation du TP
+
+```bash
+git clone https://github.com/gasilber/tp_nlp_regexps_mines
+# ou git clone git@github.com:gasilber/tp_nlp_regexps_mines si vous avez un compte Github
+cd tp_nlp_regexps_mines
+python3 -m venv .venv/tp_regexps
+source .venv/tp_regexps/bin/activate
+pip install -e .
+```
+
 ## Exercice:  extraction de données structurées
 
 Afin de faciliter votre travail, 120 décisions en HTML ont été récupérées sur le site Judilibre, et une première structuration partielle a été faite, dans le répertoire `data/ccass`, où pour chaque fichier HTML, un fichier JSON correspondant représente les données structurées (partiellemen). Le premier exemple est structuré complètement, pour vous donner un exemple de ce qu'il faut obtenir: `data/ccass/6757dc458b75c64649d25972.html` donnant `data/ccass/6757dc458b75c64649d25972.json`.

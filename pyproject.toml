@@ -20,9 +20,6 @@ classifiers = [
 ]
 
 dependencies = [
-    "lxml_html_clean",
-    "black",
-    "isort"
 ]
 
 [project.optional-dependencies]
@@ -41,8 +38,3 @@ testpaths = ["tests"]
 venvPath = "."
 venv = ".venv/tp_regexps"
 
-[tool.black]
-line-length = 88
-
-[tool.isort]
-profile = "black"
