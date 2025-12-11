@@ -12,6 +12,7 @@ git clone https://github.com/gasilber/tp_nlp_regexps_mines
 cd tp_nlp_regexps_mines
 python3 -m venv .venv/tp_regexps
 source .venv/tp_regexps/bin/activate
+pip install -U pip
 pip install -e .
 ```
 
