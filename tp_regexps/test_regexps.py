@@ -35,12 +35,11 @@ class TestRegexps(unittest.TestCase):
             with self.subTest(id, id=id):
                 self.assertEqual(reference_decision.chamber, html_decision.chamber, id)
 
-    # TODO: uncomment
-    #def test_ecli(self):
-    #    """Récupération du numéro ECLI"""
-    #    for id, reference_decision, html_decision in self.__iterate_on_decisions():
-    #        with self.subTest(id, id=id):
-    #            self.assertEqual(reference_decision.ecli, html_decision.ecli, id)
+    def test_ecli(self):
+        """Récupération du numéro ECLI"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.ecli, html_decision.ecli, id)
 
     # TODO: uncomment
     #def test_publication(self):

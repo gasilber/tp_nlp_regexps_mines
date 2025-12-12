@@ -36,4 +36,5 @@ chambre_re = re.compile(
 )
 publication_re = None  # TODO
 formation_re = None  # TODO
-ecli_re = None  # TODO
+ecli_re = re.compile(r"<p>(?P<ecli>ECLI:.*?)</p>")
+# ecli_re = re.compile(r"<p>(?P<ecli>ECLI:[A-Z:0-9]+)</p>")

@@ -86,7 +86,9 @@ class Decision(object):
 
     @staticmethod
     def __get_ecli(data: str):
-        # TODO
+        m = regexps.ecli_re.search(data)
+        if m:
+            return m.group("ecli")
         return None
 
     @staticmethod
@@ -137,7 +139,7 @@ class Decision(object):
         header = cls.__get_header(html)
         #print(header)
         d.chamber = cls.__get_chambre(header)
-        # TODO d.ecli = cls.__get_ecli(header)
+        d.ecli = cls.__get_ecli(header)
         assert d.chamber is not None
         # TODO d.publication = cls.__get_publication(header) or None
         # TODO d.formation = cls.__get_formation(header) or None
