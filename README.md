@@ -85,7 +85,7 @@ Après un test avec `parse_judilibre parse_html_decisions tp_regexps/data/ccass`
 Réécriture des fichiers JSON de référence:
 
 ```bash
-get_judilibre write_test_decisions tp_regexps/data/ccass --force
+parse_judilibre write_test_decisions tp_regexps/data/ccass --force
 ```
 
 Ajout du test correspondant, et test sur les décisions:
