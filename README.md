@@ -54,7 +54,7 @@ header_re = re.compile(r'<div\s+class="decision-header">(?P<header>.*?)</div>', 
 Affichage du résultats pour toutes les décisions, et détermination de tous les cas sur les 120 décisions pour la chambre:
 
 ```bash
-(tp1) gasilber@roya tp_nlp_regexps_mines % get_judilibre parse_html_decisions tp_regexps/data/ccass | grep 'h4-like">' | sort | uniq
+(tp1) gasilber@roya tp_nlp_regexps_mines % parse_judilibre parse_html_decisions tp_regexps/data/ccass | grep 'h4-like">' | sort | uniq
           <p class="h4-like">Chambre commerciale financière et économique
           <p class="h4-like">Chambre criminelle
           <p class="h4-like">Chambre sociale
