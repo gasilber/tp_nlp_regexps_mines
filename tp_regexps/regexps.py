@@ -34,6 +34,10 @@ chambre_re = re.compile(
 	r'|Troisième\schambre\scivile'
 	r')', re.UNICODE
 )
-publication_re = None  # TODO
-formation_re = None  # TODO
-ecli_re = None  # TODO
+publication_re = re.compile(
+    r'<p\s+class="h4-like h4-like--emphase">\s*(?P<publication>.*?)\s*</p>',
+    re.DOTALL
+)
+formation_re = None # TODO
+ecli_re = re.compile(r"<p>(?P<ecli>ECLI:.*?)</p>")  # TODO
+
