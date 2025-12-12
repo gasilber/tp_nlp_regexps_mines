@@ -2,7 +2,6 @@ import re
 
 decision_ref_re = re.compile(r'<a\s+href="/decision/(?P<id>[^\?]+)')
 
-#
 # Regex pour le bloc titre
 # <h1>10 décembre 2024<br>
 #                       Cour de cassation<br>
@@ -26,7 +25,6 @@ title_re = re.compile(
 )
 
 
-#
 # Regexps pour le "header"
 #
 # Le bloc "header" est de la forme:
