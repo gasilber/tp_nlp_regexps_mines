@@ -1,14 +1,11 @@
-import json
 import os
 import unittest
 from pathlib import Path
 
-from tp_regexps import regexps
 from tp_regexps.decision import Decision
 
 
 class TestRegexps(unittest.TestCase):
-
     @staticmethod
     def __iterate_on_decisions():
         reference_name = os.getenv("TP_REGEXP_TEST_REF", "data")
@@ -35,25 +32,38 @@ class TestRegexps(unittest.TestCase):
             with self.subTest(id, id=id):
                 self.assertEqual(reference_decision.chamber, html_decision.chamber, id)
 
-    # TODO: uncomment
-    #def test_ecli(self):
-    #    """Récupération du numéro ECLI"""
-    #    for id, reference_decision, html_decision in self.__iterate_on_decisions():
-    #        with self.subTest(id, id=id):
-    #            self.assertEqual(reference_decision.ecli, html_decision.ecli, id)
+    def test_ecli(self):
+        """Récupération du numéro ECLI"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.ecli, html_decision.ecli, id)
 
-    # TODO: uncomment
-    #def test_publication(self):
-    #    """Récupération de la publication"""
-    #    for id, reference_decision, html_decision in self.__iterate_on_decisions():
-    #        with self.subTest(id, id=id):
-    #            self.assertEqual(reference_decision.publication, html_decision.publication, id)
+    def test_publication(self):
+        """Récupération de la publication"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(
+                    reference_decision.publication, html_decision.publication, id
+                )
 
-    # TODO: uncomment
-    #def test_formation(self):
-    #    """Récupération de la formation"""
-    #    for id, reference_decision, html_decision in self.__iterate_on_decisions():
-    #        with self.subTest(id, id=id):
-    #            self.assertEqual(reference_decision.formation, html_decision.formation, id)
+    def test_formation(self):
+        """Récupération de la formation"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(
+                    reference_decision.formation, html_decision.formation, id
+                )
 
-    # TODO: number, decision_date, ...
+    def test_number(self):
+        """Récupération du numéro du pourvoi"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(reference_decision.number, html_decision.number, id)
+
+    def test_decision_date(self):
+        """Récupération de la date de décision"""
+        for id, reference_decision, html_decision in self.__iterate_on_decisions():
+            with self.subTest(id, id=id):
+                self.assertEqual(
+                    reference_decision.decision_date, html_decision.decision_date, id
+                )

@@ -1,11 +1,11 @@
+import datetime
 import json
 import re
-import datetime
 
 from . import regexps
 
 
-class Decision(object):
+class Decision:
     """Décision de la Cour de Cassation."""
 
     def __init__(
@@ -86,7 +86,9 @@ class Decision(object):
 
     @staticmethod
     def __get_ecli(data: str):
-        # TODO
+        m = regexps.ecli_re.search(data)
+        if m:
+            return m.group("ecli")
         return None
 
     @staticmethod
@@ -105,17 +107,24 @@ class Decision(object):
 
     @staticmethod
     def __get_publication(data: str):
-        # TODO
+        m = regexps.publication_re.search(data)
+        if m:
+            return m.group("publication")
         return None
 
     @staticmethod
     def __get_formation(data: str):
-        # TODO
+        m = regexps.formation_re.search(data)
+        if m:
+            return m.group("formation")
         return None
 
+    # NOTE: this method does not return a string but a match object with differents groups
     @staticmethod
     def __get_title(data: str):
-        # TODO
+        m = regexps.title_re.search(data)
+        if m:
+            return m
         return None
 
     @staticmethod
@@ -135,35 +144,36 @@ class Decision(object):
     def from_html(cls, id: str, html: str):
         d = cls(id=id)
         header = cls.__get_header(html)
-        #print(header)
+        # print(header)
         d.chamber = cls.__get_chambre(header)
-        # TODO d.ecli = cls.__get_ecli(header)
+        d.ecli = cls.__get_ecli(header)
         assert d.chamber is not None
-        # TODO d.publication = cls.__get_publication(header) or None
-        # TODO d.formation = cls.__get_formation(header) or None
-        #title = cls.__get_title(html)
-        #if title:
-        #    d.number = title.group("number")
-        #    day = int(title.group("day"))
-        #    assert day > 0 and day < 31, day
-        #    year = int(title.group("year"))
-        #    assert year > 1900 and year < 2300, year
-        #    month = title.group("month")
-        #    if re.match(r"d.cembre", month, re.I):
-        #        month = 12
-        #    else:
-        #        raise NotImplementedError(f"month: {month}")
-        #    d.decision_date = datetime.date(year, month, day).isoformat()
-        #    pass
-        #else:
-        #    print("NO TITLE")
+        d.publication = cls.__get_publication(header) or None
+
+        d.formation = cls.__get_formation(header) or None
+        title = cls.__get_title(html)
+        if title:
+            d.number = title.group("number")
+            day = int(title.group("day"))
+            assert day > 0 and day < 31, day
+            year = int(title.group("year"))
+            assert year > 1900 and year < 2300, year
+            month = title.group("month")
+            if re.match(r"d.cembre", month, re.I):
+                month = 12
+            else:
+                raise NotImplementedError(f"month: {month}")
+            d.decision_date = datetime.date(year, month, day).isoformat()
+            pass
+        else:
+            print("NO TITLE")
         # TODO: "solution"
         # TODO: "content"
         # TODO: "texts"
         return d
 
 
-class Zone(object):
+class Zone:
     """Zone d'une décision.
 
     Exemples:
